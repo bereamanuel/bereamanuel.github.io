@@ -13,23 +13,17 @@
     </div>
     <!-- End progress bar -->
     <header>
+        <div id="language-select">
+            <select id="language" onchange="changeLanguage(event)">
+                <option value="en">English</option>
+                <option value="es">Español</option>
+            </select>
+        </div>
         <div data-lang="en">
             <h1>About Me</h1>
-            <div id="language-select">
-                <select id="language" onchange="changeLanguage(event)">
-                    <option value="en">English</option>
-                    <option value="es">Español</option>
-                </select>
-            </div>
         </div>
         <div data-lang="es" style="display: none;">
             <h1>About Me</h1>
-            <div id="language-select">
-                <select id="language" onchange="changeLanguage(event)">
-                    <option value="en">English</option>
-                    <option value="es">Español</option>
-                </select>
-            </div>
         </div>
     </header>
     <nav>
