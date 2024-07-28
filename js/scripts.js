@@ -36,26 +36,26 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 // End Language selector
-
-// Start "Back to Top Button "
-// Show/hide
-function toggleBackToTopButton() {
-    var backToTopButton = document.getElementById('back-to-top');
-    if (document.body.scrollTop > 5 || document.documentElement.scrollTop > 5) {
-        backToTopButton.style.display = 'block';
-    } else {
-        backToTopButton.style.display = 'none';
-    }
-}
-
-// Scroll top
-function scrollToTop() {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-}
-
-// End "Back to Top Button "
 // Start back function
 function goBack() {
     window.history.back();
 }
 // End back function
+
+// // Start "Back to Top Button "
+// // Show/hide
+// function toggleBackToTopButton() {
+//     var backToTopButton = document.getElementById('back-to-top');
+//     if (document.body.scrollTop > 5 || document.documentElement.scrollTop > 5) {
+//         backToTopButton.style.display = 'block';
+//     } else {
+//         backToTopButton.style.display = 'none';
+//     }
+// }
+// 
+// // Scroll top
+// function scrollToTop() {
+//     window.scrollTo({ top: 0, behavior: 'smooth' });
+// }
+// 
+// // End "Back to Top Button "
