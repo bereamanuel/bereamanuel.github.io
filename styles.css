@@ -16,6 +16,7 @@ nav ul {
     list-style-type: none;
     padding: 0;
     background-color: #444;
+    text-align: center;
 }
 
 nav ul li {
@@ -29,9 +30,15 @@ nav ul li a {
 }
 
 section {
-    padding: 1em;
+    padding: 2em;
     background-color: white;
     margin: 1em;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+h2 {
+    color: #333;
 }
 
 footer {
@@ -39,4 +46,7 @@ footer {
     padding: 1em 0;
     background-color: #333;
     color: white;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
 }
