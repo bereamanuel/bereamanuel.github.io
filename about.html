@@ -7,74 +7,164 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <!-- Start progress bar -->
+    <div id="progressBarContainer">
+        <div id="progressBar"></div>
+    </div>
+    <!-- End progress bar -->
     <header>
-        <h1>About Me</h1>
+        <div data-lang="en">
+            <h1>About Me</h1>
+            <div id="language-select">
+                <select id="language" onchange="changeLanguage(event)">
+                    <option value="en">English</option>
+                    <option value="es">Español</option>
+                </select>
+            </div>
+        </div>
+        <div data-lang="es" style="display: none;">
+            <h1>About Me</h1>
+            <div id="language-select">
+                <select id="language" onchange="changeLanguage(event)">
+                    <option value="en">English</option>
+                    <option value="es">Español</option>
+                </select>
+            </div>
+        </div>
     </header>
     <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About Me</a></li>
-            <li><a href="index.html#projects">Projects</a></li>
-            <li><a href="index.html#contact">Contact</a></li>
-        </ul>
+        <div data-lang="en">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Me</a></li>
+                <li><a href="projects/index_projects.html">Projects</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+        </div>
+        <div data-lang="es" style="display: none;">
+            <ul>
+                <li><a href="index.html">Incio</a></li>
+                <li><a href="about.html">Sobre mi</a></li>
+                <li><a href="projects/index_projects.html">Proyectos</a></li>
+                <li><a href="#contact">Contacto</a></li>
+            </ul>
+        </div>
     </nav>
-    <section>
-        <h2>Who Am I?</h2>
-        <p>Hi, I'm Manu, a data analyst based in Málaga. I specialize in turning data into actionable insights. With a strong background in mathematics and data science, I have extensive experience in data analysis, machine learning, and business analytics.</p>
-        
-        <h2>Professional Experience</h2>
-        <h3>Intrum (Málaga, Spain // Online) - Data Analyst (July 2022 - Current)</h3>
-        <ul>
-            <li>Valuation and analysis of portfolios for more than 12 unsecured NPL teams in different countries in Europe.</li>
-            <li>Processing, manipulation, and interpretation of data with R. Run forecast and model pricing of portfolios, interpreting the results. Prepare Investment Memorandum reports.</li>
-            <li>Develop and maintain Shiny APPs.</li>
-        </ul>
-        
-        <h3>Allianz Technology (Online) - Data Analyst, Freelance (March 2024 - Current)</h3>
-        <ul>
-            <li>Led end-to-end project developing a survey covering 12 services in 5 different languages.</li>
-            <li>Managed the data connection, extraction, and transformation processes to make data consumable for stakeholders.</li>
-            <li>Delivered impactful insights for enhanced global customer experience.</li>
-        </ul>
+    <section id="content">
+        <div data-lang="en">
+            <h2>Who Am I?</h2>
+            <p>Hi, I'm Manu, a data analyst based in Málaga. I specialize in turning data into actionable insights. With a strong background in mathematics and data science, I have extensive experience in data analysis, machine learning, and business analytics.</p>
+            
+            <h2>Professional Experience</h2>
+            <h3>Intrum (Málaga, Spain // Online) - Data Analyst (July 2022 - Current)</h3>
+            <ul>
+                <li>Valuation and analysis of portfolios for more than 12 unsecured NPL teams in different countries in Europe.</li>
+                <li>Processing, manipulation, and interpretation of data with R. Run forecast and model pricing of portfolios, interpreting the results. Prepare Investment Memorandum reports.</li>
+                <li>Develop and maintain Shiny APPs.</li>
+            </ul>
+            
+            <h3>Allianz Technology (Online) - Data Analyst, Freelance (March 2024 - Current)</h3>
+            <ul>
+                <li>Led end-to-end project developing a survey covering 12 services in 5 different languages.</li>
+                <li>Managed the data connection, extraction, and transformation processes to make data consumable for stakeholders.</li>
+                <li>Delivered impactful insights for enhanced global customer experience.</li>
+            </ul>
 
-        <h3>BBVA (Madrid, Spain) - Big Data Analyst (December 2021 - July 2022)</h3>
-        <ul>
-            <li>Designed the structure of the bank tables feeding the BBVA bank app, the most popular banking app in Spain.</li>
-            <li>Planned, designed, and tested the ETL process of massive data with SQLSpark in an agile working environment.</li>
-        </ul>
+            <h3>BBVA (Madrid, Spain) - Big Data Analyst (December 2021 - July 2022)</h3>
+            <ul>
+                <li>Designed the structure of the bank tables feeding the BBVA bank app, the most popular banking app in Spain.</li>
+                <li>Planned, designed, and tested the ETL process of massive data with SQLSpark in an agile working environment.</li>
+            </ul>
 
-        <h3>Cognodata Consulting (Madrid, Spain) - Data Analyst (April 2021 - December 2021)</h3>
-        <ul>
-            <li>Measured and tested the loyalty campaign program for Consum supermarkets, one of the best loyalty programs in the Spanish market.</li>
-            <li>Designed customer satisfaction surveys and dashboards using Tableau.</li>
-            <li>Maintained and developed Amazon Redshift data ETL processes.</li>
-            <li>Official Tableau Certified Associate Consultant.</li>
-        </ul>
+            <h3>Cognodata Consulting (Madrid, Spain) - Data Analyst (April 2021 - December 2021)</h3>
+            <ul>
+                <li>Measured and tested the loyalty campaign program for Consum supermarkets, one of the best loyalty programs in the Spanish market.</li>
+                <li>Designed customer satisfaction surveys and dashboards using Tableau.</li>
+                <li>Maintained and developed Amazon Redshift data ETL processes.</li>
+                <li>Official Tableau Certified Associate Consultant.</li>
+            </ul>
 
-        <h2>Education</h2>
-        <h3>Universidad Internacional de La Rioja (UNIR) - M.Sc. in Computational Mathematics (Feb 2022 - Mar 2024)</h3>
-        <p>Thesis in Numerical methods for differential stochastic equations and applications.</p>
+            <h2>Education</h2>
+            <h3>Universidad Internacional de La Rioja (UNIR) - M.Sc. in Computational Mathematics (Feb 2022 - Mar 2024)</h3>
+            <p>Thesis in Numerical methods for differential stochastic equations and applications.</p>
+            
+            <h3>Universidad Complutense de Madrid (UCM) - M.Sc. in Big Data and Business Analytics, Data Science (Feb 2021 - Feb 2022)</h3>
+            <p>Thesis in Time Series Analysis and forecasting.</p>
+            
+            <h3>Universidad Autónoma de Madrid - B.S. in Mathematics (Sep 2014 - Jun 2020)</h3>
+            <p>Thesis on Markov inequality for polynomials.</p>
+            
+            <h2>Skills and Tools</h2>
+            <ul>
+                <li><strong>Programming:</strong> R, Python, SQL, Matlab, Scala, LaTeX, Git and Version control, Excel/VBA</li>
+                <li><strong>Analytics and ML Tools:</strong> Jupyter, Numpy, Pandas, Scikit-learn, XGBoost, Keras, Shiny, Tableau, PowerBI, A/B Testing</li>
+                <li><strong>Technical ML:</strong> ETL, Regression, Classification, Clustering, Ensemble methods, Deep Learning, NLP, Time Series analysis</li>
+                <li><strong>Environments:</strong> PostgreSQL, Amazon Redshift, Amazon S3, PySpark, Agile methodology, Jira</li>
+                <li><strong>Languages:</strong> Native Spanish, Fluent English</li>
+            </ul>
         
-        <h3>Universidad Complutense de Madrid (UCM) - M.Sc. in Big Data and Business Analytics, Data Science (Feb 2021 - Feb 2022)</h3>
-        <p>Thesis in Time Series Analysis and forecasting.</p>
-        
-        <h3>Universidad Autónoma de Madrid - B.S. in Mathematics (Sep 2014 - Jun 2020)</h3>
-        <p>Thesis on Markov inequality for polynomials.</p>
-        
-        <h2>Skills and Tools</h2>
-        <ul>
-            <li><strong>Programming:</strong> R, Python, SQL, Matlab, Scala, LaTeX, Git and Version control, Excel/VBA</li>
-            <li><strong>Analytics and ML Tools:</strong> Jupyter, Numpy, Pandas, Scikit-learn, XGBoost, Keras, Shiny, Tableau, PowerBI, A/B Testing</li>
-            <li><strong>Technical ML:</strong> ETL, Regression, Classification, Clustering, Ensemble methods, Deep Learning, NLP, Time Series analysis</li>
-            <li><strong>Environments:</strong> PostgreSQL, Amazon Redshift, Amazon S3, PySpark, Agile methodology, Jira</li>
-            <li><strong>Languages:</strong> Native Spanish, Fluent English</li>
-        </ul>
-        
-        <h2>Contact</h2>
-        <p>You can reach me at <a href="mailto:mbaberearellano@gmail.com">mbaberearellano@gmail.com</a></p>
+            <h2>Contact</h2>
+            <p>You can reach me at <a href="mailto:mbaberearellano@gmail.com">mbaberearellano@gmail.com</a></p>
+        </div>
+        <div data-lang="es" style="display: none;">
+            <h2>¿Quién soy?</h2>
+            <p>Hola, soy Manu, un analista de datos con base en Málaga. Me especializo en convertir datos en información procesable. Con una sólida formación en matemáticas y ciencia de datos, tengo una amplia experiencia en análisis de datos, aprendizaje automático y análisis empresarial.</p>
+            
+            <h2>Experiencia Profesional</h2>
+            <h3>Intrum (Málaga, España // Online) - Analista de Datos (Julio 2022 - Actualidad)</h3>
+            <ul>
+                <li>Valoración y análisis de carteras para más de 12 equipos de NPL no garantizados en diferentes países de Europa.</li>
+                <li>Procesamiento, manipulación e interpretación de datos con R. Ejecutar previsiones y modelar precios de carteras, interpretando los resultados. Preparar informes de memorandos de inversión.</li>
+                <li>Desarrollar y mantener aplicaciones Shiny.</li>
+            </ul>
+            
+            <h3>Allianz Technology (Online) - Analista de Datos, Freelance (Marzo 2024 - Actualidad)</h3>
+            <ul>
+                <li>Lideré un proyecto de principio a fin desarrollando una encuesta que abarcaba 12 servicios en 5 idiomas diferentes.</li>
+                <li>Gestioné los procesos de conexión, extracción y transformación de datos para hacerlos consumibles para las partes interesadas.</li>
+                <li>Entregué conocimientos impactantes para mejorar la experiencia global del cliente.</li>
+            </ul>
+
+            <h3>BBVA (Madrid, España) - Analista de Big Data (Diciembre 2021 - Julio 2022)</h3>
+            <ul>
+                <li>Diseñé la estructura de las tablas del banco que alimentan la aplicación bancaria BBVA, la aplicación bancaria más popular de España.</li>
+                <li>Planifiqué, diseñé y probé el proceso ETL de datos masivos con SQLSpark en un entorno de trabajo ágil.</li>
+            </ul>
+
+            <h3>Cognodata Consulting (Madrid, España) - Analista de Datos (Abril 2021 - Diciembre 2021)</h3>
+            <ul>
+                <li>Medí y probé el programa de fidelización para los supermercados Consum, uno de los mejores programas de fidelización del mercado español.</li>
+                <li>Diseñé encuestas de satisfacción del cliente y paneles de control usando Tableau.</li>
+                <li>Mantuve y desarrollé procesos ETL de datos de Amazon Redshift.</li>
+                <li>Consultor Asociado Certificado Oficial de Tableau.</li>
+            </ul>
+
+            <h2>Educación</h2>
+            <h3>Universidad Internacional de La Rioja (UNIR) - M.Sc. en Matemáticas Computacionales (Febrero 2022 - Marzo 2024)</h3>
+            <p>Tesis en métodos numéricos para ecuaciones estocásticas diferenciales y aplicaciones.</p>
+            
+            <h3>Universidad Complutense de Madrid (UCM) - M.Sc. en Big Data y Análisis de Negocios, Ciencia de Datos (Febrero 2021 - Febrero 2022)</h3>
+            <p>Tesis en Análisis y previsión de series temporales.</p>
+            
+            <h3>Universidad Autónoma de Madrid - B.S. en Matemáticas (Septiembre 2014 - Junio 2020)</h3>
+            <p>Tesis sobre la desigualdad de Markov para polinomios.</p>
+            
+            <h2>Habilidades y Herramientas</h2>
+            <ul>
+                <li><strong>Programación:</strong> R, Python, SQL, Matlab, Scala, LaTeX, Git y control de versiones, Excel/VBA</li>
+                <li><strong>Herramientas de análisis y ML:</strong> Jupyter, Numpy, Pandas, Scikit-learn, XGBoost, Keras, Shiny, Tableau, PowerBI, Pruebas A/B</li>
+                <li><strong>ML Técnico:</strong> ETL, Regresión, Clasificación, Clustering, Métodos de conjunto, Aprendizaje profundo, PNL, Análisis de series temporales</li>
+                <li><strong>Entornos:</strong> PostgreSQL, Amazon Redshift, Amazon S3, PySpark, Metodología ágil, Jira</li>
+                <li><strong>Idiomas:</strong> Español nativo, inglés fluido</li>
+            </ul>
+            
+            <h2>Contacto</h2>
+            <p>Puedes contactarme en <a href="mailto:mbaberearellano@gmail.com">mbaberearellano@gmail.com</a></p>
+        </div>
     </section>
     <footer>
         <p>&copy; 2024 bereamanuel</p>
     </footer>
+    <script src="js/scripts.js"></script>
 </body>
 </html>

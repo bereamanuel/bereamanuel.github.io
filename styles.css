@@ -1,22 +1,35 @@
+/* Importar la fuente de Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background-color: #f8f8f8;
+    color: #333;
+    padding-bottom: 60px;
 }
 
 header {
-    background-color: #333;
+    background-color: #222;
     color: white;
     text-align: center;
     padding: 1em 0;
 }
 
+#language-select {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: white;
+}
+
 nav ul {
     list-style-type: none;
     padding: 0;
-    background-color: #444;
+    background-color: #333;
     text-align: center;
+    margin: 0;
 }
 
 nav ul li {
@@ -27,26 +40,63 @@ nav ul li {
 nav ul li a {
     color: white;
     text-decoration: none;
+    padding: 0.5em 1em;
+    display: inline-block;
+}
+
+nav ul li a:hover {
+    background-color: #555;
 }
 
 section {
     padding: 2em;
     background-color: white;
-    margin: 1em;
+    margin: 1em auto;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
 }
 
-h2 {
-    color: #333;
+h1, h2 {
+    color: #444;
+    text-align: center;
+}
+
+h1 {
+    color: white;
+}
+
+ul {
+    padding-left: 1em;
 }
 
 footer {
     text-align: center;
     padding: 1em 0;
-    background-color: #333;
+    background-color: #222;
     color: white;
     position: fixed;
     bottom: 0;
     width: 100%;
+    height: 40px;
+    z-index: 101; 
+}
+
+
+/* Progress bar style */
+#progressBarContainer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 10px;
+    background-color: #222;
+    z-index: 102;
+}
+
+
+#progressBar {
+    height: 10px;
+    background-color: #f3f3f3; /* Cambia este color según tu esquema de colores */
+    width: 0%;
 }

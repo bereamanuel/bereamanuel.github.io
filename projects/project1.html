@@ -7,8 +7,19 @@
     <link rel="stylesheet" href="../styles.css">
 </head>
 <body>
+    <!-- Start progress bar -->
+    <div id="progressBarContainer">
+        <div id="progressBar"></div>
+    </div>
+    <!-- End progress bar -->
     <header>
         <h1>Project 1: E-Commerce Analysis</h1>
+        <div id="language-select">
+            <select id="language" onchange="changeLanguage(event)">
+                <option value="en">English</option>
+                <option value="es">Español</option>
+            </select>
+        </div>
     </header>
     <section>
         <h2>Introduction</h2>
@@ -21,5 +32,6 @@
     <footer>
         <p>&copy; 2024 bereamanuel</p>
     </footer>
+    <script src="../js/scripts.js"></script>
 </body>
 </html>
