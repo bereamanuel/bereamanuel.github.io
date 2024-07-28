@@ -123,3 +123,20 @@ footer {
 #back-to-top:hover {
     background-color: #45a049;
 }
+
+/* "Back" Button */
+#back-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #f3f3f3;
+    background-color: #222;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#back-button:hover {
+    background-color: #0056b3;
+}

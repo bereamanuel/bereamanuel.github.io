@@ -54,3 +54,8 @@ function scrollToTop() {
 }
 
 // End "Back to Top Button "
+// Start back function
+function goBack() {
+    window.history.back();
+}
+// End back function
