@@ -61,7 +61,6 @@ section {
 
 h1, h2 {
     color: #444;
-    text-align: center;
 }
 
 h1 {
@@ -139,4 +138,16 @@ footer {
 
 #back-button:hover {
     background-color: #0056b3;
+}
+
+
+.responsive-img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 50%;
+    width: 10em; /* Tamaño del círculo */
+    display: block;
+    margin: 0; /* Eliminar margen de la imagen */
+    float: right; /* Flotar a la izquierda */
+    padding-right: 20px;
 }
