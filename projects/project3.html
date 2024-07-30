@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project 3: Numerical methods</title>
+    <link rel="stylesheet" href="../styles.css">
+    <script src="../js/scripts.js" defer></script>
+</head>
+<body>
+    <div id="progressBarContainer">
+        <div id="progressBar"></div>
+    </div>
+    <header>
+        <div id="language-select">
+            <select id="language" onchange="changeLanguage(event)">
+                <option value="en">English</option>
+                <option value="es">Español</option>
+            </select>
+        </div>
+        <div data-lang="en">
+            <h1>Project 3: Numerical methods in Python, R and Matlab</h1>
+        </div>
+        <div data-lang="es" style="display: none;">
+            <h1>Proyecto 3: Métodos numéricos en Python, R y Matlab</h1>
+        </div>
+    </header>
+    <nav>
+        <div data-lang="en">
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../index.html#projects">Projects</a></li>
+                <li><a href="../index.html#contact">Contact</a></li>
+                <li><a href="../about.html">CV</a></li>
+            </ul>
+        </div>
+        <div data-lang="es" style="display: none;">
+            <ul>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="../index.html#projects">Proyectos</a></li>
+                <li><a href="../index.html#contact">Contacto</a></li>
+                <li><a href="../about.html">CV</a></li>
+            </ul>
+        </div>
+    </nav>
+    <section id="content">
+        <div data-lang="en">
+            <h1 style="color: black;">Numerical Methods Project</h1>
+            <h2>Methods in MATLAB | Python | R</h2>
+
+            <h3>Interpolation</h3>
+            <ul>
+                <li>Newton ( Matlab | Python | R )</li>
+                <li>Lagrange ( Matlab | Python | R )</li>
+                <li>Hermite ( Matlab | Python | R )</li>
+                <li>Splines ( Matlab | Python | R )</li>
+            </ul>
+
+            <h3>Differentiation</h3>
+            <ul>
+                <li>High precision differentiation: Taylor derivative order 1, 2 and 3 ( Matlab | Python | R )</li>
+                <li>Richardson extrapolation ( Matlab | Python | R )</li>
+            </ul>
+
+            <h3>Single and Multiple Integration</h3>
+            <h4>Single:</h4>
+            <ul>
+                <li>Equally spaced nodes, Newton-Cotes formulas:
+                    <ul>
+                        <li>Closed methods:
+                            <ul>
+                                <li>Simple trapezoidal method ( Matlab | Python | R )</li>
+                                <li>Composite trapezoidal method ( Matlab | Python | R )</li>
+                                <li>Simple Simpson's method ( Matlab | Python | R )</li>
+                                <li>Composite Simpson's method ( Matlab | Python | R )</li>
+                            </ul>
+                        </li>
+                        <li>Open methods:
+                            <ul>
+                                <li>Simple midpoint method ( Matlab | Python | R )</li>
+                                <li>Composite midpoint method ( Matlab | Python | R )</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>Unequally spaced nodes, Gauss quadratures:
+                    <ul>
+                        <li>Gauss-Legendre ( Python | R )</li>
+                        <li>Gauss-Hermite ( Python | R )</li>
+                        <li>Gauss-Chebyshev ( Python | R )</li>
+                        <li>Gauss-Laguerre ( Python | R )</li>
+                    </ul>
+                </li>
+            </ul>
+
+            <h4>Multiple:</h4>
+            <ul>
+                <li>Equally spaced nodes:
+                    <ul>
+                        <li>Trapezoidal method ( Python | R )</li>
+                        <li>Simpson's method ( Python | R )</li>
+                    </ul>
+                </li>
+                <li>Unequally spaced nodes:
+                    <ul>
+                        <li>Gauss-Legendre ( Python | R )</li>
+                        <li>Gauss-Hermite ( Python | R )</li>
+                        <li>Gauss-Chebyshev ( Python | R )</li>
+                        <li>Gauss-Laguerre ( Python | R )</li>
+                    </ul>
+                </li>
+            </ul>
+
+            <h3>Numerical Methods for ODEs:</h3>
+            <h4>Initial Value Problem (IVP)</h4>
+            <p>We will solve initial value problems for first-order differential equations, systems of first-order differential equations, and higher-order differential equations.</p>
+            <ul>
+                <li>One-step methods:
+                    <ul>
+                        <li>Explicit Euler ( Matlab | Python | R )</li>
+                        <li>Implicit Euler ( Matlab | Python | R )</li>
+                        <li>Heun ( Matlab | Python | R )</li>
+                        <li>Runge-Kutta ( Matlab | Python | R )</li>
+                        <li>Euler Systems ( Matlab | Python | R )</li>
+                    </ul>
+                </li>
+                <li>Multistep methods:
+                    <ul>
+                        <li>Adams-Bashforth (explicit method) ( Matlab | Python | R )</li>
+                        <li>Adams-Moulton (implicit method) ( Matlab | Python | R )</li>
+                        <li>Predictor-corrector ( Matlab | Python | R )</li>
+                    </ul>
+                </li>
+                <li>Stiff problems:
+                    <ul>
+                        <li>In Matlab, we use the ode15s function</li>
+                        <li>In Python, we can use the scipy library with the command scipy.integrate.ode(f).set_integrator('vode', method='bdf', order=15)</li>
+                        <li>In R, we can use the pracma library with the ode45 function</li>
+                    </ul>
+                </li>
+            </ul>
+
+            <h4>Boundary Value Problems (BVP)</h4>
+            <ul>
+                <li>Linear shooting method with Dirichlet conditions</li>
+                <li>Nonlinear shooting method with Dirichlet conditions:
+                    <ul>
+                        <li>Shooting method with secant</li>
+                        <li>Shooting method with Newton</li>
+                    </ul>
+                </li>
+                <li>Nonlinear shooting method with Natural conditions, which are variations of the shooting method with secant and Newton that depend on the proposed problem. Comments in the code indicate where changes might be made.</li>
+            </ul>
+
+            <h3>Systems of Linear Equations</h3>
+            <ul>
+                <li>Direct methods:
+                    <p>To use direct methods to solve problems like Ax = b, we need A to be invertible. Additionally, the matrix dimension should not be too large.</p>
+                    <p>Since we generally want to calculate matrices with large dimensions, we will develop iterative methods.</p>
+                </li>
+                <li>Iterative methods:
+                    <ul>
+                        <li>Jacobi method ( Matlab | Python | R )</li>
+                        <li>Gauss-Seidel method ( Matlab | Python | R )</li>
+                        <li>JSOR method ( Matlab | Python | R )</li>
+                        <li>SOR method ( Matlab | Python | R )</li>
+                    </ul>
+                </li>
+                <li>Crout tridiagonals ( Matlab | Python | R )</li>
+            </ul>
+
+            <h3>Nonlinear Equations</h3>
+            <p>We will use iterative methods, creating a script for Newton and another commented one where changes can be made to quickly modify the method to be used.</p>
+            <ul>
+                <li>Newton ( Matlab | Python | R )</li>
+                <li>Jarrat ( Matlab )</li>
+            </ul>
+
+            <h3>Systems of Nonlinear Equations</h3>
+            <p>We will use iterative methods, creating a script for Newton and another commented one where changes can be made to quickly modify the method to be used.</p>
+            <ul>
+                <li>Newton ( Matlab )</li>
+                <li>Jarrat ( Matlab )</li>
+            </ul>
+
+            <h3>Polynomials</h3>
+            <p>Functions that help us find the roots and coefficients necessary for Gauss quadratures.</p>
+            <ul>
+                <li>Legendre ( Python | R )</li>
+                <li>Chebyshev ( Python | R )</li>
+                <li>Laguerre ( Python | R )</li>
+                <li>Hermite ( Python | R )</li>
+            </ul>
+            <h2>Repository</h2>
+            <p>You can view the complete project on GitHub: <a href="https://github.com/bereamanuel/metodosNumericos" class="project-link" target="_blank">Numerical Methods in Python, R, and Matlab</a>.</p>
+
+            <button id="back-button" onclick="goBack()">Back</button>
+        </div>
+        <div data-lang="es" style="display: none;">
+            <h1 style="color: black;">Proyecto de Métodos Numéricos</h1>
+            <h2>Métodos en MATLAB | Python | R</h2>
+
+            <h3>Interpolación</h3>
+            <ul>
+                <li>Newton ( Matlab | Python | R )</li>
+                <li>Lagrange ( Matlab | Python | R )</li>
+                <li>Hermite ( Matlab | Python | R )</li>
+                <li>Splines ( Matlab | Python | R )</li>
+            </ul>
+
+            <h3>Diferenciación</h3>
+            <ul>
+                <li>Diferenciación de alta precisión: Taylor derivada orden 1, 2 y 3 ( Matlab | Python | R )</li>
+                <li>Extrapolación de Richardson ( Matlab | Python | R )</li>
+            </ul>
+
+            <h3>Integración Simple y Múltiple</h3>
+            <h4>Simple:</h4>
+            <ul>
+                <li>Nodos equiespaciados, fórmulas de Newton-Cotes:
+                    <ul>
+                        <li>Métodos cerrados:
+                            <ul>
+                                <li>Método de los trapecios simple ( Matlab | Python | R )</li>
+                                <li>Método de los trapecios compuesto ( Matlab | Python | R )</li>
+                                <li>Método de Simpson simple ( Matlab | Python | R )</li>
+                                <li>Método de Simpson compuesto ( Matlab | Python | R )</li>
+                            </ul>
+                        </li>
+                        <li>Métodos abiertos:
+                            <ul>
+                                <li>Punto medio simple ( Matlab | Python | R )</li>
+                                <li>Punto medio compuesto ( Matlab | Python | R )</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>Nodos no equiespaciados, cuadraturas de Gauss:
+                    <ul>
+                        <li>Gauss-Legendre ( Python | R )</li>
+                        <li>Gauss-Hermite ( Python | R )</li>
+                        <li>Gauss-Chebyshev ( Python | R )</li>
+                        <li>Gauss-Laguerre ( Python | R )</li>
+                    </ul>
+                </li>
+            </ul>
+
+            <h4>Múltiple:</h4>
+            <ul>
+                <li>Nodos equiespaciados:
+                    <ul>
+                        <li>Método de los trapecios ( Python | R )</li>
+                        <li>Método de Simpson ( Python | R )</li>
+                    </ul>
+                </li>
+                <li>Nodos no equiespaciados:
+                    <ul>
+                        <li>Gauss-Legendre ( Python | R )</li>
+                        <li>Gauss-Hermite ( Python | R )</li>
+                        <li>Gauss-Chebyshev ( Python | R )</li>
+                        <li>Gauss-Laguerre ( Python | R )</li>
+                    </ul>
+                </li>
+            </ul>
+
+            <h3>Métodos Numéricos para EDOs:</h3>
+            <h4>Problema del Valor Inicial (PVI)</h4>
+            <p>Vamos a resolver problemas de valor inicial de ecuaciones diferenciales de primer orden, sistemas de ecuaciones diferenciales de primer orden y ecuaciones diferenciales de orden superior.</p>
+            <ul>
+                <li>Métodos de un paso:
+                    <ul>
+                        <li>Euler Explícito ( Matlab | Python | R )</li>
+                        <li>Euler Implícito ( Matlab | Python | R )</li>
+                        <li>Heun ( Matlab | Python | R )</li>
+                        <li>Runge-Kutta ( Matlab | Python | R )</li>
+                        <li>Euler Sistemas ( Matlab | Python | R )</li>
+                    </ul>
+                </li>
+                <li>Métodos multipaso:
+                    <ul>
+                        <li>Adams-Bashforth (método explícito) ( Matlab | Python | R )</li>
+                        <li>Adams-Moulton (método implícito) ( Matlab | Python | R )</li>
+                        <li>Predictor-corrector ( Matlab | Python | R )</li>
+                    </ul>
+                </li>
+                <li>Problemas Stiff:
+                    <ul>
+                        <li>En Matlab, utilizamos la función ode15s</li>
+                        <li>En Python, podemos usar la librería scipy con el comando scipy.integrate.ode(f).set_integrator('vode', method='bdf', order=15)</li>
+                        <li>En R, podemos usar la librería pracma con la función ode45</li>
+                    </ul>
+                </li>
+            </ul>
+
+            <h4>Problemas de Contorno (PVC)</h4>
+            <ul>
+                <li>Método de disparo lineal con condiciones Dirichlet</li>
+                <li>Método de disparo no lineal con condiciones Dirichlet:
+                    <ul>
+                        <li>Método de disparo con secante</li>
+                        <li>Método de disparo con Newton</li>
+                    </ul>
+                </li>
+                <li>Método de disparo no lineal con condiciones naturales, que son variaciones del método de disparo con secante y Newton que dependen del problema propuesto. En el código se indica dónde se pueden hacer cambios.</li>
+            </ul>
+
+            <h3>Sistemas de Ecuaciones Lineales</h3>
+            <ul>
+                <li>Métodos directos:
+                    <p>Para usar métodos directos y resolver problemas del estilo Ax = b, necesitamos que A sea invertible. Además, la dimensión de la matriz no debe ser grande.</p>
+                    <p>Dado que generalmente queremos calcular matrices de gran dimensión, desarrollaremos métodos iterativos.</p>
+                </li>
+                <li>Métodos iterativos:
+                    <ul>
+                        <li>Método de Jacobi ( Matlab | Python | R )</li>
+                        <li>Método de Gauss-Seidel ( Matlab | Python | R )</li>
+                        <li>Método JSOR ( Matlab | Python | R )</li>
+                        <li>Método SOR ( Matlab | Python | R )</li>
+                    </ul>
+                </li>
+                <li>Crout tridiagonales ( Matlab | Python | R )</li>
+            </ul>
+
+            <h3>Ecuaciones No Lineales</h3>
+            <p>Usaremos métodos iterativos, creando un script para Newton y otro comentado donde se indique dónde hacer cambios para modificar rápidamente el método a utilizar.</p>
+            <ul>
+                <li>Newton ( Matlab | Python | R )</li>
+                <li>Jarrat ( Matlab )</li>
+            </ul>
+
+            <h3>Sistemas de Ecuaciones No Lineales</h3>
+            <p>Usaremos métodos iterativos, creando un script para Newton y otro comentado donde se indique dónde hacer cambios para modificar rápidamente el método a utilizar.</p>
+            <ul>
+                <li>Newton ( Matlab )</li>
+                <li>Jarrat ( Matlab )</li>
+            </ul>
+
+            <h3>Polinomios</h3>
+            <p>Funciones que nos ayudan a conseguir las raíces y los coeficientes necesarios para hacer cuadraturas de Gauss.</p>
+            <ul>
+                <li>Legendre ( Python | R )</li>
+                <li>Chebyshev ( Python | R )</li>
+                <li>Laguerre ( Python | R )</li>
+                <li>Hermite ( Python | R )</li>
+            </ul>
+
+            <h2>Repositorio</h2>
+            <p>Puedes ver el proyecto completo en GitHub: <a href="https://github.com/bereamanuel/metodosNumericos" class="project-link" target="_blank">Numerical Methods in Python, R, and Matlab</a>.</p>
+            <button id="back-button" onclick="goBack()">Atrás</button>
+        </div>
+    </section>
+    <footer>
+        <p>&copy; 2024 Manu</p>
+    </footer>
+    <button id="back-to-top" onclick="scrollToTop()">↑</button>
+</body>
+</html>
